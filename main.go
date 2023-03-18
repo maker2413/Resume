@@ -12,6 +12,7 @@ import (
 type Resume struct {
 	InputYaml string
 	OutputFile string
+	PDFOutputFile string
 	TemplateDir string
 }
 
@@ -22,7 +23,7 @@ func check(e error){
 	}
 }
 
-func defaultResume (resume Resume) Resume {
+func defaultResumeValues (resume Resume) Resume {
 	if resume.InputYaml == "" {
 		resume.InputYaml = "resume.yml"
 	}
@@ -37,7 +38,7 @@ func defaultResume (resume Resume) Resume {
 }
 
 func BuildResume (r Resume) {
-	resume := defaultResume(r)
+	resume := defaultResumeValues(r)
 
 	out, err := os.Create(resume.OutputFile)
 	defer out.Close()
@@ -59,6 +60,8 @@ func BuildResume (r Resume) {
 }
 
 func main() {
-	resume := Resume{}
+	resume := Resume{
+		PDFOutputFile: "Resume.pdf",
+	}
 	BuildResume(resume)
 }
