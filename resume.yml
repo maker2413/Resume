@@ -1,0 +1,27 @@
+---
+Name: "Ethan Post"
+Job: "CloudOps Engineer"
+Email: "ethancpost@gmail.com"
+Website: "ethancpost.com"
+Location: "Sioux Falls, SD"
+Mission: "To get a job"
+Skills:
+  - "GoLang"
+  - "HTML"
+Experience:
+  - Role: "DevOps Engineer"
+    Company: "ThreatConnect"
+    Started: "May 2019"
+    Ended: "Apil 2021"
+    Location: "Arlington, Va [Remote]"
+    Details:
+      - Jenkins
+      - Containers
+  - Role: "DevOps Engineer"
+    Company: "EROS"
+    Started: "Someday"
+    Ended: "Someday"
+    Location: "Sioux Falls, SD"
+    Details:
+      - Jenkins
+      - Containers
